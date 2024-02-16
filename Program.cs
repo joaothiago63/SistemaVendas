@@ -8,6 +8,8 @@ namespace SistemaVendas
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddSession();
+            builder.Services.AddSingleton<IHttpContextAccessor>();
 
             var app = builder.Build();
 

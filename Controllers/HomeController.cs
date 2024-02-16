@@ -17,20 +17,42 @@ namespace SistemaVendas.Controllers
         public IActionResult Index()
         {
             DAL obj = new DAL();
-            obj.ExecutarComandoSql("INSERT INTO VENDEDOR (nome, email, senha) values ('João','contato_joaothiago@hotmail.com','123456')");
+           // obj.ExecutarComandoSql("INSERT INTO VENDEDOR (nome, email, senha) values ('João','contato_joaothiago@hotmail.com','123456')");
 
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Login()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult Login(LoginModel login)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+
+            /*NÃO ESQUECER DE TIRAR A TAG REQUIRED DO HTML*/
+            if (ModelState.IsValid)
+            {
+                if (login.ValidarLogin())
+                {
+                    return RedirectToAction("Menu");
+                }
+                TempData["MsgErro"] = "Login Inválido";
+                return View(login);
+            }
+
+            return View(login);
         }
+
+        public IActionResult Menu()
+        {
+            return View();
+        }
+
+
+
+
+       
     }
 }

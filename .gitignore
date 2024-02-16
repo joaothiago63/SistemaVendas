@@ -1,0 +1,7 @@
+*.json
+
+# Arquivos DLL
+*.dll
+
+# Pasta bin
+bin/

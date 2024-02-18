@@ -58,3 +58,4 @@ C:\C# CODE\SistemaVendas\SistemaVendas\obj\Debug\net6.0\refint\SistemaVendas.dll
 C:\C# CODE\SistemaVendas\SistemaVendas\obj\Debug\net6.0\SistemaVendas.pdb
 C:\C# CODE\SistemaVendas\SistemaVendas\obj\Debug\net6.0\SistemaVendas.genruntimeconfig.cache
 C:\C# CODE\SistemaVendas\SistemaVendas\obj\Debug\net6.0\ref\SistemaVendas.dll
+C:\C# CODE\SistemaVendas\SistemaVendas\bin\Debug\net6.0\Newtonsoft.Json.dll

@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body onload="CarregaUsuarioLogado()">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -24,16 +24,11 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
-                        </li>
+                        
                     </ul>
+                    @using Microsoft.AspNetCore.Http
+                    @inject IHttpContextAccessor HttpContextAccessor
+                    <div id="UsuarioLogado"></div>
                 </div>
             </div>
         </nav>
@@ -53,5 +48,24 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <script>
+        function CarregaUsuarioLogado() {
+               
+            var json = '@HttpContextAccessor.HttpContext.Session.GetString("usuario")'
+    
+            if (json !== '') {
+                var divNome = document.getElementById('UsuarioLogado');
+                var decodedString = $("<div/>").html(json).text();
+                var usuario = JSON.parse(decodedString)
+                
+                divNome.innerHTML = 'Ola ' + usuario.Nome + ' <a href="../Home/Sair">(SAIR)</a>';
+                divNome.style = 'padding-top:15px;'
+            }
+            else{
+                window.location.href = '../Home/Login';
+            }
+            
+        }
+    </script>
 </body>
 </html>

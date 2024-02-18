@@ -9,7 +9,7 @@ namespace SistemaVendas
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddSession();
-            builder.Services.AddSingleton<IHttpContextAccessor>();
+            builder.Services.AddSingleton<IHttpContextAccessor,HttpContextAccessor>();
 
             var app = builder.Build();
 
@@ -19,6 +19,8 @@ namespace SistemaVendas
                 app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 

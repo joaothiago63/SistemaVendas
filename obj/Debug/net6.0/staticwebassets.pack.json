@@ -13,6 +13,30 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\C# CODE\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\clientes.png",
+      "PackagePath": "staticwebassets\\images\\clientes.png"
+    },
+    {
+      "Id": "C:\\C# CODE\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\configuracoes.png",
+      "PackagePath": "staticwebassets\\images\\configuracoes.png"
+    },
+    {
+      "Id": "C:\\C# CODE\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\produtos.png",
+      "PackagePath": "staticwebassets\\images\\produtos.png"
+    },
+    {
+      "Id": "C:\\C# CODE\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\relatorios.png",
+      "PackagePath": "staticwebassets\\images\\relatorios.png"
+    },
+    {
+      "Id": "C:\\C# CODE\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\vendas.png",
+      "PackagePath": "staticwebassets\\images\\vendas.png"
+    },
+    {
+      "Id": "C:\\C# CODE\\SistemaVendas\\SistemaVendas\\wwwroot\\images\\vendedores.png",
+      "PackagePath": "staticwebassets\\images\\vendedores.png"
+    },
+    {
       "Id": "C:\\C# CODE\\SistemaVendas\\SistemaVendas\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

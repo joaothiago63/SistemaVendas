@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AnSc5VLTsUcE4tu+cZ0Wlf1bGtf1Tz1R7YmHFiFiU0XFQUJfXonbsTGdxnlEshdBVYvNxfeGw0VqIR3dBHHnQA==",
+  "dgSpecHash": "oGxuQk05v6DfrVb6Mvq3hGG+fGNmF1yQ0dW3oKS4zY1a08Zbghu3eq+9Azm4o1qcGWSOi4c2lFfezh2F7uNwGg==",
   "success": true,
   "projectFilePath": "C:\\C# CODE\\SistemaVendas\\SistemaVendas\\SistemaVendas.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\conta\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\conta\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\conta\\.nuget\\packages\\mysql.data\\8.3.0\\mysql.data.8.3.0.nupkg.sha512",
+    "C:\\Users\\conta\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\conta\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\conta\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
     "C:\\Users\\conta\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.2\\system.diagnostics.diagnosticsource.7.0.2.nupkg.sha512",

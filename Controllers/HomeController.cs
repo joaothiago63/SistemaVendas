@@ -2,6 +2,8 @@
 using SistemaVendas.Models;
 using SistemaVendas.Uteis;
 using System.Diagnostics;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace SistemaVendas.Controllers
 {
@@ -17,7 +19,7 @@ namespace SistemaVendas.Controllers
         public IActionResult Index()
         {
             DAL obj = new DAL();
-           // obj.ExecutarComandoSql("INSERT INTO VENDEDOR (nome, email, senha) values ('João','contato_joaothiago@hotmail.com','123456')");
+            // obj.ExecutarComandoSql("INSERT INTO VENDEDOR (nome, email, senha) values ('João','contato_joaothiago@hotmail.com','123456')");
 
             return View();
         }
@@ -25,6 +27,12 @@ namespace SistemaVendas.Controllers
         public IActionResult Login()
         {
             return View();
+        }
+
+        public IActionResult Sair()
+        {
+            HttpContext.Session.SetString("usuario", "");
+            return RedirectToAction("Login");
         }
 
         [HttpPost]
@@ -36,6 +44,9 @@ namespace SistemaVendas.Controllers
             {
                 if (login.ValidarLogin())
                 {
+                    UsuarioModel usuario = new UsuarioModel(login);
+                    string json = JsonConvert.SerializeObject(usuario);
+                    HttpContext.Session.SetString("usuario", json);
                     return RedirectToAction("Menu");
                 }
                 TempData["MsgErro"] = "Login Inválido";
@@ -47,12 +58,14 @@ namespace SistemaVendas.Controllers
 
         public IActionResult Menu()
         {
+
+
             return View();
         }
 
 
 
 
-       
+
     }
 }
